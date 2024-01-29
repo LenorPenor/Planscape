@@ -38,6 +38,10 @@ app.use('/api/projects', projectRoutes)
 app.use('/api/lists', listRoutes)
 app.use('/api/tasks', taskRoutes)
 
+app.get("/", (req, res) => {
+   res.setHeader("Access-Control-Allow-Credentials", "true")
+})
+
 //listen on PORT and log success message message on callback
 app.listen(PORT, () => {
    console.log(`server running on port ${PORT}`.magenta.underline)
