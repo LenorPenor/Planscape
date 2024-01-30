@@ -40,6 +40,7 @@ app.use('/api/tasks', taskRoutes)
 
 app.get("/", (req, res) => {
    res.send("API running.")
+   res.setHeader("Access-Control-Allow-Credentials", "true")
 })
 
 //listen on PORT and log success message message on callback
